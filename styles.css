@@ -1,0 +1,415 @@
+/* Author: Isaac Militante */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+  --yellow: #F6D64A;
+  --teal: #55BCD5;
+  --purple: #9B26B0;
+  --blue: #499BD2;
+  --dark-gray: #222222;
+  --light-gray: #EAEAEA;
+  --white: #FFFFFF;
+  --black: #000000;
+  --main-font: 'Montserrat', sans-serif;
+  --logo-font: 'Molle', cursive;
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font);
+  color: var(--black);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#skip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--yellow);
+  color: var(--black);
+  padding: 8px;
+  z-index: 100;
+}
+
+#skip:focus {
+  top: 0;
+}
+
+header {
+    background: linear-gradient(to bottom, #55BCD5, #ffffff);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--logo-font);
+  color: var(--black);
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+header p {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--dark-gray);
+}
+
+#menu-toggle label {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#menu-toggle ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#toggle:checked + label + ul {
+  display: block;
+}
+
+#menu-toggle ul li {
+  background-color: var(--teal);
+  border-bottom: 1px solid var(--black);
+  text-align: center;
+}
+
+#menu-toggle ul li a {
+  display: block;
+  padding: 1rem 0;
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+}
+
+/* ==========================
+   MAIN SECTIONS
+========================== */
+#intro {
+  padding: 2rem;
+  background: var(--white);
+  text-align: center;
+}
+#intro h2 {
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+#img-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+#plan h3 {
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+#plan {
+    background-color: var(--yellow);
+}
+#plan img {
+    background-color: var(--teal);
+    padding: 1rem;
+    width: 64px;
+    height: 64px;
+    box-sizing: content-box;
+}
+#plan div section {
+    background-color: var(--teal);
+    border-radius: 6px;
+    padding: 1rem;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid var(--white);
+  }
+  
+  #plan h4 {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--main-font);
+  }
+  
+#plan, #testimonials, #about, #contact {
+  padding: 2rem;
+}
+
+#testimonials h3 {
+color: var(--black);
+text-align: center;
+margin-bottom: 1rem;
+font-family: var(--logo-font);
+font-size: 2rem;
+}
+#testimonials h4 {
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: x-large;
+}
+#about {
+    background-color: var(--blue);
+}
+#about h3 {
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: var(--logo-font);
+}
+#about h4 {
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+#contact h3 {
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form-required {
+    font-family: var(--main-font); 
+    font-style: italic;
+    font-weight: 100; 
+    font-size: 0.9rem; 
+  }
+#contact h3
+#plan div,
+#about div,
+#testimonials div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+}
+
+#testimonials section q {
+  font-style: italic;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+form {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 8px;
+}
+label {
+    font-family: var(--main-font); 
+    font-size: 16px; 
+    font-weight: 100;
+    text-transform: uppercase;
+}
+form label {
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 2px solid purple; 
+  padding: 5px;
+}
+
+form input[type="submit"] {
+  background-color: var(--purple);
+  color: var(--white);
+  font-weight: bold;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+.required {
+  color: var(--purple);
+  margin-left: 4px;
+}
+.radio-input input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.radio-control {
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    border: 2px solid purple; 
+    border-radius: 50%;
+    position: relative;
+    margin-right: 8px;
+    vertical-align: middle;
+    transition: border-color 0.3s ease;
+}
+
+
+.radio-input input[type="radio"]:checked + .radio-control::after {
+    content: "";
+    display: block;
+    width: 10px; 
+    height: 10px;
+    background-color: purple;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.radio-input:hover .radio-control {
+    border-color: #a020f0; 
+}
+footer {
+  background-color: var(--light-gray);
+  color: var(--black);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--black);
+  margin: 0 0.5rem;
+  text-decoration: underline;
+}
+
+.sr-only,
+#toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 600px) {
+    header {
+      padding: 2rem;
+    }
+  
+    #img-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    #plan div,
+    #about div,
+    #testimonials div {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 900px) {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+  
+    #menu-toggle label {
+      display: none; /
+    }
+  
+    #menu-toggle ul {
+      display: flex !important;
+      gap: 2rem;
+      background-color: transparent;
+    }
+  
+    #menu-toggle ul li {
+      border: none;
+      background-color: transparent;
+    }
+  
+    #menu-toggle ul li a {
+      color: var(--white);
+      padding: 1rem;
+    }
+  }
+  
